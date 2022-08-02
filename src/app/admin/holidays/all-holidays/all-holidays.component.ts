@@ -28,10 +28,11 @@ export class AllHolidayComponent
     "id",
     "first_in",
     "first_out",
-    "date",
     "last_in",
     "last_out",
+    "date",
     "status",
+    "total",
     "shift",
     "actions",
   ];

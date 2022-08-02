@@ -24,18 +24,22 @@
 
           <mat-form-field class="example-full-width mb-3">
             <mat-label>Choose a time</mat-label>
-            <input matInput [owlDateTimeTrigger]="myFilter" [owlDateTime]="time1" matInput formControlName="first_in" required>
+            <input matInput [owlDateTimeTrigger]="time1" [owlDateTime]="time1" matInput formControlName="first_in" required>
             <mat-icon matSuffix [owlDateTimeTrigger]="time1" class="date-icon">schedule</mat-icon>
             <owl-date-time [pickerType]="'timer'" #time1></owl-date-time>
+            <mat-error *ngIf="holidayForm.get('first_in').hasError('required')">
+              HolidayFirst out is required
+            </mat-error>
           </mat-form-field>
 
       
         </div>
         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
-          <mat-form-field class="example-full-width" appearance="outline">
-            <mat-label>First out</mat-label>
-            <input matInput formControlName="first_out" required>
-            <mat-icon matSuffix>article</mat-icon>
+          <mat-form-field class="example-full-width mb-3">
+            <mat-label>Choose a time</mat-label>
+            <input matInput [owlDateTimeTrigger]="time2" [owlDateTime]="time2" matInput formControlName="first_out" required>
+            <mat-icon matSuffix [owlDateTimeTrigger]="time2" class="date-icon">schedule</mat-icon>
+            <owl-date-time [pickerType]="'timer'" #time2></owl-date-time>
             <mat-error *ngIf="holidayForm.get('first_out').hasError('required')">
               HolidayFirst out is required
             </mat-error>
@@ -51,22 +55,24 @@
        
         <!--firstin -->
           <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
-            <mat-form-field class="example-full-width" appearance="outline">
-              <mat-label>Last in</mat-label>
-              <input matInput formControlName="last_in" required>
-              <mat-icon matSuffix>article</mat-icon>
+            <mat-form-field class="example-full-width mb-3">
+              <mat-label>Choose a time</mat-label>
+              <input matInput [owlDateTimeTrigger]="time3" [owlDateTime]="time3" matInput formControlName="last_in" required>
+              <mat-icon matSuffix [owlDateTimeTrigger]="time3" class="date-icon">schedule</mat-icon>
+              <owl-date-time [pickerType]="'timer'" #time3></owl-date-time>
               <mat-error *ngIf="holidayForm.get('last_in').hasError('required')">
-                Holiday last in is required
+                HolidayFirst out is required
               </mat-error>
             </mat-form-field>
           </div>
           <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
-            <mat-form-field class="example-full-width" appearance="outline">
-              <mat-label>Last out</mat-label>
-              <input matInput formControlName="last_out" required>
-              <mat-icon matSuffix>article</mat-icon>
+            <mat-form-field class="example-full-width mb-3">
+              <mat-label>Choose a time</mat-label>
+              <input matInput [owlDateTimeTrigger]="time4" [owlDateTime]="time4" matInput formControlName="last_out" required>
+              <mat-icon matSuffix [owlDateTimeTrigger]="time4" class="date-icon">schedule</mat-icon>
+              <owl-date-time [pickerType]="'timer'" #time4></owl-date-time>
               <mat-error *ngIf="holidayForm.get('last_out').hasError('required')">
-                Holiday Last out is required
+                HolidayFirst out is required
               </mat-error>
             </mat-form-field>
           </div>

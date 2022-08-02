@@ -9,6 +9,7 @@ export class AllHoliday {
   shift: string;
   date: string;
   status:string;
+  total:string;
   
   constructor(holiday) {
     {
@@ -19,6 +20,7 @@ export class AllHoliday {
       this.first_out = holiday.first_out || "";
       this.last_in = holiday.last_in || "";
       this.last_out = holiday.last_out || "";
+      this.total = holiday.total || "";
       this.status = holiday.status || "";
       this.shift = holiday.shift || "";
       this.date = formatDate(new Date(), "yyyy-MM-dd", "en") || "";

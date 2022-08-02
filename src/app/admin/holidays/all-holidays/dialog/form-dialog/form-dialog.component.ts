@@ -60,6 +60,7 @@ export class FormDialogComponent {
       first_out: [this.holiday.first_out],
       last_in: [this.holiday.last_in],
       last_out: [this.holiday.last_out],
+     
       status: [this.holiday.status],
       date: [this.holiday.date],
       shift: [this.holiday.shift],
@@ -111,9 +112,6 @@ export class FormDialogComponent {
 }
 
 
- formatDate(date: Date){
-  console.log(date.getHours());
 
-}
 
 }
